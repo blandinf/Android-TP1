@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ExampleDMII</string>
+    <string name="app_name">Hello Toast</string>
     <string name="toast">TOAST</string>
     <string name="count">COUNT</string>
 </resources>

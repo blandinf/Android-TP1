@@ -7,22 +7,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/white"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/toastBtn"
+        style="@style/CustomButtonsTheme"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:text="@string/toast"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="@string/toast" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/displayView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/black"
+        android:background="@color/second_color"
         app:layout_constraintTop_toBottomOf="@id/toastBtn"
         app:layout_constraintBottom_toTopOf="@id/incrementBtn">
         <TextView
@@ -34,16 +36,17 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             android:gravity="center"
-            android:textColor="@color/white"
-            android:textSize="80sp"
+            android:textColor="@color/primary_color"
+            android:text="0"
+            android:textSize="160sp"
             android:textStyle="bold" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/incrementBtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:text="@string/count"
+        style="@style/CustomButtonsTheme"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
