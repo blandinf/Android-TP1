@@ -8,19 +8,19 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.blandinf.exampledmii.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button incrementBtn;
-    Button toastBtn;
-    TextView countTextView;
     Integer count = 0;
+    ActivityMainBinding binding;
 
     View.OnClickListener listener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (v == incrementBtn) {
+            if (v == binding.incrementButton) {
                 increment();
-            } else if (v == toastBtn) {
+            } else if (v == binding.toastButton) {
                 toast();
             }
         }
@@ -29,24 +29,21 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         init();
     }
 
     private void init () {
-        incrementBtn = (Button) findViewById(R.id.incrementBtn);
-        toastBtn = (Button) findViewById(R.id.toastBtn);
-        countTextView = (TextView) findViewById(R.id.countTextView);
+        binding.incrementButton.setOnClickListener(listener);
+        binding.toastButton.setOnClickListener(listener);
 
-        incrementBtn.setOnClickListener(listener);
-        toastBtn.setOnClickListener(listener);
-
-        countTextView.setText(count.toString());
+        binding.countTextView.setText(count.toString());
     }
 
     private void increment () {
         count++;
-        countTextView.setText(count.toString());
+        binding.countTextView.setText(count.toString());
     }
 
     private void toast () {
