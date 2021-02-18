@@ -3,4 +3,11 @@
     <string name="toast">TOAST</string>
     <string name="count">COUNT</string>
     <string name="compute">COMPUTE</string>
+    <string name="second_view">Redirect to Second view</string>
+    <string name="mail_view">Redirect to Mail view</string>
+    <string name="send_an_email">Send an email</string>
+    <string name="email">Email</string>
+    <string name="cc">Cc</string>
+    <string name="subject">Subject</string>
+    <string name="body">Body</string>
 </resources>
