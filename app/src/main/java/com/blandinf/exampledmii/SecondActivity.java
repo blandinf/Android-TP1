@@ -22,7 +22,7 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (binding.firstNumber != null && binding.secondNumber != null) {
-                    Integer result = Integer.parseInt(binding.firstNumber.getText().toString()) + Integer.parseInt(binding.secondNumber.getText().toString());
+                    Double result = Double.parseDouble(binding.firstNumber.getText().toString()) + Double.parseDouble(binding.secondNumber.getText().toString());
                     binding.result.setText(result.toString());
                 }
             }
