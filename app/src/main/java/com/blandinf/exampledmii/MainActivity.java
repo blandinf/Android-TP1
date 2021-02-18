@@ -3,11 +3,10 @@ package com.blandinf.exampledmii;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-
 import com.blandinf.exampledmii.databinding.ActivityMainBinding;
+import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         binding.sendEmailButton.setOnClickListener(listener);
         binding.redirectSecondViewButton.setOnClickListener(listener);
+        Glide.with(this).load("https://www.numerama.com/content/uploads/2020/01/mercure-planete-espace-1.jpg").into(binding.myImage);
     }
 
     private void redirectTo (Class customClass) {
