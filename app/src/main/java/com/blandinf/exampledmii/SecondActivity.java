@@ -22,8 +22,6 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (binding.firstNumber != null && binding.secondNumber != null) {
-                    Log.v("teeest", binding.firstNumber.getText().toString());
-                    Log.v("teeest", binding.firstNumber.toString());
                     Integer result = Integer.parseInt(binding.firstNumber.getText().toString()) + Integer.parseInt(binding.secondNumber.getText().toString());
                     binding.result.setText(result.toString());
                 }
